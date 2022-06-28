@@ -7,9 +7,12 @@ public class Quadrato implements Poligono {
 	
 
 	//costruttore
-	public Quadrato(int lato) {
+	public Quadrato(int lato) throws IllegalArgumentException {
 		super();
-		
+		//valida dato
+		if(lato < 0) {
+			throw new IllegalArgumentException("il numero inserito non può essere un numero negativo");
+		}
 		this.lato = lato;
 		
 	}
