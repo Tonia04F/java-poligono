@@ -8,8 +8,11 @@ public class Rettangolo implements Poligono {
 
 	
 	//costruttore
-		public Rettangolo(int base, int altezza) {
-		super();
+		public Rettangolo(int base, int altezza) throws IllegalArgumentException{
+			if(base < 0 || altezza < 0) {
+				throw new IllegalArgumentException("il numero inserito non può essere un numero negativo");
+			}
+			
 		this.base = base;
 		this.altezza = altezza;
 
